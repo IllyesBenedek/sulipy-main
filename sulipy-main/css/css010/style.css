@@ -1,0 +1,17 @@
+.box1 {
+    border: red 1px solid;
+}
+
+.box2 {
+    border: blue 1px solid;
+}
+
+span {
+    display: inline-block;
+    height: 100px;
+}
+
+img {
+    display: block;
+    height: 100px;
+}
