@@ -1,0 +1,13 @@
+.container {
+    margin-top: 50px;
+}
+
+.icon-box {
+    display: flex;
+    justify-content: center;
+}
+
+.my-icon {
+    font-size: 90px;
+    color: brown;
+}
