@@ -1,0 +1,5 @@
+print("almafa")
+print("almafa")
+print(4 + 5)
+print("alma" + "fa")
+print("4" + "5")
