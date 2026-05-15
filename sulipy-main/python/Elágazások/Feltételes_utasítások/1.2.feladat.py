@@ -1,5 +1,6 @@
 valasz = (input("Jó napod van ma (igen/nem): "))
 
+
 if valasz == "igen":
     print("Örülök neki szép napot kivánok")
 elif valasz == "nem":
