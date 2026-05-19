@@ -16,4 +16,4 @@ elif valasz == "/" and b != 0:
 elif "**" or "%":
     print("Ezt a műveletet még nem ismerem!")
 else:
-    print("?!")
+    print("?!!")
