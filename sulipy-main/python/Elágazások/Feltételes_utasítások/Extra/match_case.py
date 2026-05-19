@@ -16,4 +16,6 @@ match valasz:
         print(f"{a} {valasz} {b} = {a * b}")
     case  "**" | "%":
         print("Ezt a műveletet még nem ismerem!")
-    
+    case other:
+        #   case_:
+        print("?!!")
