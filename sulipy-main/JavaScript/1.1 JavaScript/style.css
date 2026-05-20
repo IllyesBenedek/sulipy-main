@@ -1,0 +1,30 @@
+body {
+    background-color: #1D484E;
+}
+
+
+
+h1 {
+    color: #3e99b4;
+    text-align: center;
+    font-size: 4rem;
+}
+
+p {
+    color: rgb(36, 196, 38);
+    text-align: center;
+    font-size: 5rem;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    background-color: #007EA5;
+    color: white;
+    font-size: 1.5em;
+    border: 1px solid rgb(26, 0, 34);
+    border-radius: 10px;
+}
