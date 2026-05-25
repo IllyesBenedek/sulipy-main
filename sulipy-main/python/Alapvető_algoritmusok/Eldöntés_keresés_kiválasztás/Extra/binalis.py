@@ -10,7 +10,7 @@ talalt = False
 
 while also <= felso:
     kozep = (also + felso) // 2
-    
+
     if lista[kozep] == keresett:
         talalt = True
         break
