@@ -3,9 +3,19 @@ import pygame
 
 # --- Színek ---
 WHITE = (255, 255, 255)
-BLACK = (0, 0, 0)
 GREEN = (0, 255, 0)
 RED = (255, 0, 0)
+BLUE = (0, 0, 255)
+YELLOW = (255, 255, 0)
+
+
+# --- Billentyű - szín szótár ---
+COLOR_MAP = {
+    pygame.K_r: RED,
+    pygame.K_g: GREEN,
+    pygame.K_b: BLUE,
+    pygame.K_y: YELLOW,
+}
 
 
 # --- Inicializálás ---
@@ -14,7 +24,6 @@ screen = pygame.display.set_mode((600, 300))
 pygame.display.set_caption("Színek")
 
 background_color = WHITE
-show_shapes = True
 
 
 # --- Fő ciklus ---
@@ -28,18 +37,14 @@ while running:
             running = False
 
         if event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_SPACE:
-                show_shapes = False
+            if event.key in COLOR_MAP:
+                background_color = COLOR_MAP[event.key]
+
+    # --- Ablakcím frissítése ---
+    pygame.display.set_caption(f"Háttérszín RGB: {background_color}")
 
     # --- Kirajzolás ---
     screen.fill(background_color)
-
-    if show_shapes:
-        pygame.draw.circle(screen, BLACK, (300, 150), 50, 3)
-        pygame.draw.rect(screen, RED, (10, 20, 100, 50), 5)
-        pygame.draw.ellipse(screen, GREEN, (50, 50, 200, 75), 8)
-        pygame.draw.polygon(screen, RED, [(120, 90), (120, 190), (200, 150)])
-
     pygame.display.update()
 
 

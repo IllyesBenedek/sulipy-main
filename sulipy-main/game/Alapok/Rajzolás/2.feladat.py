@@ -3,25 +3,15 @@ import pygame
 
 # --- Színek ---
 WHITE = (255, 255, 255)
+BLACK = (0, 0, 0)
 GREEN = (0, 255, 0)
 RED = (255, 0, 0)
-BLUE = (0, 0, 255)
-YELLOW = (255, 255, 0)
-
-
-# --- Billentyű - szín szótár ---
-COLOR_MAP = {
-    pygame.K_r: RED,
-    pygame.K_g: GREEN,
-    pygame.K_b: BLUE,
-    pygame.K_y: YELLOW,
-}
 
 
 # --- Inicializálás ---
 pygame.init()
 screen = pygame.display.set_mode((600, 300))
-pygame.display.set_caption("Színek")
+pygame.display.set_caption("Vonalak")
 
 background_color = WHITE
 
@@ -36,15 +26,15 @@ while running:
         if event.type == pygame.QUIT:
             running = False
 
-        if event.type == pygame.KEYDOWN:
-            if event.key in COLOR_MAP:
-                background_color = COLOR_MAP[event.key]
-
-    # --- Ablakcím frissítése ---
-    pygame.display.set_caption(f"Háttérszín RGB: {background_color}")
-
     # --- Kirajzolás ---
     screen.fill(background_color)
+
+    pygame.draw.line(screen, BLACK, (50, 50), (550, 50), 1)
+    pygame.draw.line(screen, BLACK, (50, 100), (550, 100), 3)
+    pygame.draw.line(screen, BLACK, (50, 150), (550, 150), 6)
+    pygame.draw.line(screen, BLACK, (50, 200), (550, 200), 10)
+    pygame.draw.line(screen, BLACK, (50, 250), (550, 250), 15)
+
     pygame.display.update()
 
 
