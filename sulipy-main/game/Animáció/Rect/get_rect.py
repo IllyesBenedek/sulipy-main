@@ -10,9 +10,9 @@ BIRD_SPEED = 5
 pygame.init()
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 clock = pygame.time.Clock()
+
 bird_surf = pygame.image.load("Animáció/Képek/img/bird1.png").convert_alpha()
-bird_x = 0
-bird_y = 200
+bird_rect = bird_surf.get_rect(midleft=(0, HEIGHT / 2))
 
 
 # --- Fő ciklus ---
@@ -26,9 +26,10 @@ while running:
 
     # --- Kirajzolás ---
     screen.fill(BG_COLOR)
-    if bird_x < WIDTH - 100:
-        bird_x += BIRD_SPEED
-    screen.blit(bird_surf, (bird_x, bird_y))
+
+    if bird_rect.right <= WIDTH:
+        bird_rect.left += BIRD_SPEED
+    screen.blit(bird_surf, bird_rect)
     pygame.display.update()
     clock.tick(60)
 
