@@ -11,12 +11,8 @@ pygame.init()
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 clock = pygame.time.Clock()
 
-plane_surf = pygame.image.load(
-    "Animáció/Rect/img/Fly_1.png"
-).convert_alpha()
-plane_surf_flipped = pygame.image.load(
-    "Animáció/Rect/img/Fly_1_back.png"
-).convert_alpha()
+plane_surf = pygame.image.load("Animáció/Rect/img/Fly_1.png").convert_alpha()
+plane_surf_flipped = pygame.image.load("Animáció/Rect/img/Fly_1_back.png").convert_alpha()
 plane_rect = plane_surf.get_rect(midleft=(0, HEIGHT / 2))
 plane_forward = True
 

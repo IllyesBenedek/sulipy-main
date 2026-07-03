@@ -32,9 +32,7 @@ while running:
         bird_rect.left += BIRD_SPEED
     elif bird_rect.right == WIDTH:
         bird_forward = False
-        bird_surf = pygame.image.load(
-            "Animáció/Rect/img/bird1back.png"
-        ).convert_alpha()
+        bird_surf = pygame.image.load("Animáció/Rect/img/bird1back.png").convert_alpha()
         bird_rect = bird_surf.get_rect(midright=(WIDTH - 1, HEIGHT / 2))
     else:
         bird_rect.left -= BIRD_SPEED

@@ -13,8 +13,7 @@ screen = pygame.display.set_mode((WIDTH, HEIGHT))
 
 rect = pygame.Rect(50, 60, 200, 80)
 print(f"x={rect.x}, y={rect.y}, w={rect.w}, h={rect.h}")
-print(f"left={rect.left}, top={rect.top}, "
-      f"right={rect.right}, bottom={rect.bottom}")
+print(f"left={rect.left}, top={rect.top}, right={rect.right}, bottom={rect.bottom}")
 print(f"center={rect.center}")
 
 
