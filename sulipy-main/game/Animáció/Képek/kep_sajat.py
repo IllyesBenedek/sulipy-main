@@ -11,7 +11,6 @@ pygame.init()
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 clock = pygame.time.Clock()
 bird_surf = pygame.image.load("Animáció/Képek/img/bird1.png").convert_alpha()
-bird_surf = pygame.transform.scale(bird_surf, (80, 60))
 bird_x = 0
 bird_y = 200
 
