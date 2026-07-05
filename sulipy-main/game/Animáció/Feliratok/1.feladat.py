@@ -5,7 +5,10 @@ import time
 # --- Beállítások ---
 WIDTH, HEIGHT = 1280, 620
 BG_COLOR = (140, 137, 246)
-FONT_COLOR = (255, 255, 255)
+
+TITLE_COLOR = (255, 255, 255)
+TIME_COLOR = (255, 230, 0)
+SCORE_COLOR = (255, 80, 80)
 
 # --- Inicializálás ---
 pygame.init()
@@ -13,8 +16,12 @@ time_start = time.time()
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 clock = pygame.time.Clock()
 
-game_font = pygame.font.SysFont("arial", 60)
-text_surf = game_font.render("GAME", True, FONT_COLOR)
+# Mindhárom feliratnak eltérő betűtípusa, színe és mérete van
+title_font = pygame.font.SysFont("arial", 60)
+time_font = pygame.font.SysFont("couriernew", 40)
+score_font = pygame.font.SysFont("comicsansms", 50)
+
+text_surf = title_font.render("GAME", True, TITLE_COLOR)
 text_rect = text_surf.get_rect(center=(WIDTH / 2, HEIGHT / 2))
 
 score = 0
@@ -32,10 +39,10 @@ while running:
             score += 1
 
     game_time = str(int(time.time() - time_start))
-    time_surf = game_font.render("SEC: " + game_time, True, FONT_COLOR)
+    time_surf = time_font.render("SEC: " + game_time, True, TIME_COLOR)
     time_rect = time_surf.get_rect(topright=(WIDTH - 10, 10))
 
-    score_surf = game_font.render("SCORE: " + str(score), True, FONT_COLOR)
+    score_surf = score_font.render("SCORE: " + str(score), True, SCORE_COLOR)
     score_rect = score_surf.get_rect(topleft=(10, 10))
 
     # --- Kirajzolás ---
